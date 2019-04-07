@@ -1,5 +1,5 @@
 body {
-    background: #fafafa
+    background: #fafafa;
 }
 p {
     font-size: 1.1em;
@@ -19,7 +19,7 @@ a:focus {
     background: #fff;
     border: none;
     border-radius: 0;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 .navbar-btn{
@@ -34,27 +34,41 @@ a:focus {
     margin: 40px 0px;
 }
 .warpper {
+    position: absolute;
     display: flex;
     width: 100%;
+    height: 100%;
     align-items: stretch;
 }
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
-    color: #FFF;
+    height: 100%;
+    background: #FFF;
+    color: #000;
     transition: all 0.3s;
 }
+
 #sidebar.active {
     margin-left: -250px;
 }
-#sidebar.sidebar-header {
-    padding: 20px;
-    background:  #6D7FCC;
+/* 设置用户图标 */
+#userImageForNav img{
+    width: 25px;
+    height: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* 设置头部图标 */
+#sidebar.sidebar-header img {
+    width: 75px;
+    display: block;
+    background:  #FFF;
 }
 #sidebar ul.components{
     padding: 20px 0px;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid #ffffff;
 }
 #sidebar ul p {
     padding: 10px;
@@ -70,15 +84,15 @@ a:focus {
 }
 /* 控制鼠标放到导航栏颜色背景的变化 */
 #sidebar ul li a:hover{
-    color: #47748b;
-    background: #FFF;
+    color: #222222;
+    background: #b6b6b6;
 }
 
 /* 设置有下拉的标签的样式如Home Page */
 #sidebar ul li.active>a,
 a[aria-expanded='true'] {
-    color: #FFF;
-    background: #6D7FCC;
+    color: #000;
+    background: #FFF;
 }
 /* 改行控制Page标签，当Home标签打开时，Page可以自动的滑到下面。 */
 a[data-toggle="collapse"] {
@@ -93,10 +107,11 @@ a[data-toggle="collapse"] {
     right: 20px;
     transform: translateY(-50%);
 }
+/* 下拉菜单下拉时菜单的颜色 */
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #d3d3d3;
 }
 
 /* 设置Downloader和article标签等信息 */
@@ -112,12 +127,12 @@ ul.CTAs a {
 }
 /* 设置下载图片的背景颜色等 */
 a.download {
-    background: #fff;
-    color: #7386D5;
+    background: rgb(250, 84, 84);
+    color: rgb(255, 255, 255);
 }
-/* 设置artiva标签的颜色等 */
+/* 设置artiva等待时标签的颜色等 */
 a.article,article:hover{
-    background: #6d7fcc;
+    background: #2d69ebc9;
 }
 
 #content {
