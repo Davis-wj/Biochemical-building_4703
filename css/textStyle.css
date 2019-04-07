@@ -1,0 +1,139 @@
+body {
+    background: #fafafa
+}
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.navbar{
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+.navbar-btn{
+    box-shadow: none;
+    outline: none!important;
+    border: none;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0px;
+}
+.warpper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #7386D5;
+    color: #FFF;
+    transition: all 0.3s;
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+#sidebar.sidebar-header {
+    padding: 20px;
+    background:  #6D7FCC;
+}
+#sidebar ul.components{
+    padding: 20px 0px;
+    border-bottom: 1px solid #47748b;
+}
+#sidebar ul p {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+/* 设置导航栏标签 */
+#sidebar ul li a{
+    padding: 10px;
+    font-size: 1.1em;
+    /* 设置为 block后87行设置的三角标签就可以到达正常位置 */
+    display: block;
+}
+/* 控制鼠标放到导航栏颜色背景的变化 */
+#sidebar ul li a:hover{
+    color: #47748b;
+    background: #FFF;
+}
+
+/* 设置有下拉的标签的样式如Home Page */
+#sidebar ul li.active>a,
+a[aria-expanded='true'] {
+    color: #FFF;
+    background: #6D7FCC;
+}
+/* 改行控制Page标签，当Home标签打开时，Page可以自动的滑到下面。 */
+a[data-toggle="collapse"] {
+    position: relative;
+}
+/* 添加一个小箭头的标签 */
+.dropdown-toggle:after{
+    margin-top: 10px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+/* 设置Downloader和article标签等信息 */
+ul.CTAs {
+    padding: 20px;
+}
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em ;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+/* 设置下载图片的背景颜色等 */
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+/* 设置artiva标签的颜色等 */
+a.article,article:hover{
+    background: #6d7fcc;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* 设置不同尺寸的浏览设备显示样式 */
+@media(maz-width:768px){
+    #sidebar{margin-left: -250px;}
+    #sidebar.active{
+        margin-left: 0px;
+    }
+    #sidebarCollapse span{
+        display: none;
+    }
+}
