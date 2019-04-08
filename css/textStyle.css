@@ -1,138 +1,122 @@
-body {
-    background: #fafafa;
-}
-p {
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body{font-family: 'Poppins', sans-serif;
+     background: #fafafa}
+p{font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+	font-weight: 300;
+	line-height: 1.7em;
+	color: #999;
 }
 a,
 a:hover,
-a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
+a:focus{
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
 }
 .navbar{
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    /* margin-bottom: 40px; */
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+	padding: 15px 10px;
+	background: #fff;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 40px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
+
 .navbar-btn{
-    box-shadow: none;
-    outline: none!important;
-    border: none;
+	box-shadow: none;
+	outline: none!important;
+	border: none;
 }
-.line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
-    margin: 40px 0px;
+
+.line{
+	width: 100%;
+	height: 1px;
+	border-bottom: 1px dashed #ddd;
 }
-.warpper {
-    position: absolute;
+
+.wrapper {
     display: flex;
     width: 100%;
-    height: 100%;
     align-items: stretch;
 }
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    height: 100%;
-    background: #FFF;
-    color: #000;
+    background: #7386D5;
+    color: #fff;
     transition: all 0.3s;
 }
-
-#sidebar.active {
-    margin-left: -250px;
-}
-/* 设置用户图标 */
-#userImageForNav img{
-    width: 25px;
-    height: 25px;
-    padding: 0px;
-    margin: 0px;
+#sidebar.active{
+	margin-left: -250px;
 }
 
-/* 设置头部图标 */
-#sidebar.sidebar-header img {
-    width: 75px;
-    display: block;
-    background:  #FFF;
+#sidebar .sidebar-header{
+	padding: 20px;
+	background: #6d7fcc;
 }
 #sidebar ul.components{
-    padding: 20px 0px;
-    border-bottom: 1px solid #ffffff;
-}
-#sidebar ul p {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-/* 设置导航栏标签 */
-#sidebar ul li a{
-    padding: 10px;
-    font-size: 1.1em;
-    /* 设置为 block后87行设置的三角标签就可以到达正常位置 */
-    display: block;
-}
-/* 控制鼠标放到导航栏颜色背景的变化 */
-#sidebar ul li a:hover{
-    color: #222222;
-    background: #b6b6b6;
+	padding: 20px 0px;
+	border-bottom: 1px solid #47748b;
 }
 
-/* 设置有下拉的标签的样式如Home Page */
-#sidebar ul li.active>a,
-a[aria-expanded='true'] {
-    color: #000;
-    background: #FFF;
+#sidebar ul p{
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
 }
-/* 改行控制Page标签，当Home标签打开时，Page可以自动的滑到下面。 */
+
+#sidebar ul li a{
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
 a[data-toggle="collapse"] {
     position: relative;
 }
-/* 添加一个小箭头的标签 */
-.dropdown-toggle:after{
-    margin-top: 10px;
+.dropdown-toggle::after {
     display: block;
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
 }
-/* 下拉菜单下拉时菜单的颜色 */
+
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #d3d3d3;
+    background: #6d7fcc;
 }
 
-/* 设置Downloader和article标签等信息 */
 ul.CTAs {
     padding: 20px;
 }
+
 ul.CTAs a {
     text-align: center;
-    font-size: 0.9em ;
+    font-size: 0.9em !important;
     display: block;
     border-radius: 5px;
     margin-bottom: 5px;
 }
-/* 设置下载图片的背景颜色等 */
-a.download {
-    background: rgb(250, 84, 84);
-    color: rgb(255, 255, 255);
+a.download{
+	background: #fff;
+	color: #7386D5;
 }
-/* 设置artiva等待时标签的颜色等 */
-a.article,article:hover{
-    background: #2d69ebc9;
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
 }
 
 #content {
@@ -142,13 +126,36 @@ a.article,article:hover{
     transition: all 0.3s;
 }
 
-/* 设置不同尺寸的浏览设备显示样式 */
 @media(maz-width:768px){
-    #sidebar{margin-left: -250px;}
-    #sidebar.active{
-        margin-left: 0px;
-    }
-    #sidebarCollapse span{
-        display: none;
-    }
+	#sidebar{margin-left: -250px;}
+	#sidebar.active{
+		margin-left: 0px;
+	}
+	#sidebarCollapse span{
+		display: none;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
